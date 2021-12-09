@@ -11,20 +11,30 @@
 
 <body class="body">
   <header class="header">
-    <h2 class="visually-hidden">Навигация по странице</h2>
-    <a class="header__logo link">
-      <picture>
-        <source>
-        <img src="" alt="">
-      </picture>
-    </a>
-    <nav class="header__nav">
-      <ul class="header__nav-list list">
-        <li class="header__nav-item"><a class="link">О путешествии</a></li>
-        <li class="header__nav-item"><a class="link">Цены</a></li>
-        <li class="header__nav-phone"><a href="tel:+749978468446">+7 (499) -784-684-46</a></li>
-      </ul>
-    </nav>
+    <div class="header__wrapper container">
+      <h2 class="visually-hidden">Навигация по странице</h2>
+      <a class="header__logo link">
+        <img src="img/logo.svg" width="58" height="22" alt="Way">
+      </a>
+      <nav class="header__nav">
+        <ul class="header__nav-list list">
+          <li class="header__nav-item">
+            <a class="header__nav-item-link link">О путешествии</a>
+          </li>
+          <li class="header__nav-item">
+            <a class="header__nav-item-link link">Цены</a>
+          </li>
+          <li class="header__nav-phone">
+            <a class="header__nav-phone-link" href="tel:+749978468446">
+              <svg class="header__nav-phone-icon">
+                <use xlink:href="img/icons/sprite_auto.svg#icon-phone"></use>
+              </svg>
+              +7 (499) -784-684-46
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </header>
   <main class="main">
     <h1 class="visually-hidden">Way - сервис по поиску путешествий</h1>
