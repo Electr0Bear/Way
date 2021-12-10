@@ -31,3 +31,15 @@
   letter-spacing: -0.466667px;
   color: $white;
 }
+
+.page-header__button {
+  display: flex;
+  justify-content: space-between;
+  width: 340px;
+}
+
+.page-header__button-icon {
+  width: 14px;
+  height: 14px;
+  fill: none;
+}
