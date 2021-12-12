@@ -19,7 +19,7 @@
   font-weight: 600;
   font-size: 55px;
   line-height: 80px;
-  letter-spacing: -1.10667px;
+  letter-spacing: -1.11px;
   color: $white;
 }
 
@@ -28,11 +28,12 @@
   padding: 0 20px 0 0;
   font-size: 16px;
   line-height: 27px;
-  letter-spacing: -0.466667px;
+  letter-spacing: -0.47px;
   color: $white;
 }
 
 .page-header__button {
+  padding: 30px 40px 30px 40px;
   display: flex;
   justify-content: space-between;
   width: 340px;
