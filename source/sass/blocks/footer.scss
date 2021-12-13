@@ -1,0 +1,59 @@
+.footer {
+  padding-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.footer__heading {
+  margin: 5px 0 20px 0;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 32px;
+  color: $extraDark;
+}
+
+.footer__tours {
+  padding: 0 30px 12px 0;
+  border-right: 1px solid $extraGrey;
+}
+
+.footer__tours-list {
+  column-count: 3;
+  column-gap: 20px;
+}
+
+.footer__tours-item {
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 17px;
+  color: $extraDarkOpacue05;
+}
+
+.footer__contacts {
+  padding: 0 30px;
+  border-right: 1px solid $extraGrey;
+}
+
+.footer__contacts-link {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: $extraGrey;
+
+  & svg {
+    margin-right: 15px;
+    fill: none;
+    width: 30px;
+    height: 30px;
+  }
+
+  & span {
+    text-decoration: underline;
+    color: $basicAccent;
+  }
+}
+
+.footer__business-tours {
+  padding-left: 30px;
+}
