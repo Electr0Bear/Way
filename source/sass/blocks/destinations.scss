@@ -4,12 +4,23 @@
 }
 
 .destinations__title {
-  margin: 0;
+  margin: 0 0 64px 0;
   padding: 0;
+  position: relative;
   font-weight: 600;
   font-size: 55px;
   line-height: 80px;
   letter-spacing: -1.25px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -30px;
+    display: block;
+    width: 228px;
+    height: 4px;
+    background-color: $basicAccent;
+  }
 }
 
 .destinations__description {
@@ -17,6 +28,11 @@
   line-height: 28px;
   letter-spacing: -0.47px;
   color: $basicDarkOpacue07;
+}
+
+.destinations__title,
+.destinations__description {
+  width: 330px;
 }
 
 .destinations__list {
@@ -44,7 +60,8 @@
   align-items: center;
 }
 
-.destinations__card:hover {
+.destinations__card:hover,
+.destinations__card:focus {
   & .destinations__card-link {
     display: block;
   }
