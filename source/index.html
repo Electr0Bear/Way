@@ -47,7 +47,7 @@
         <h2 class="page-header__title">Путешествие по Европе</h2>
         <p class="page-header__descritpion">В этом туре вы откроете для себя Европу в новом свете. Вас ждет: море, горы,
           а также потрясающая красота природы.</p>
-        <a class="page-header__button button" href="">
+        <a class="page-header__button button" href="#tour-section">
           Смотреть тур
           <svg class="page-header__button-icon">
             <use xlink:href="img/icons/sprite_auto.svg#icon-arrow"></use>
@@ -61,7 +61,7 @@
         <p class="destinations__description">Вы можете выбрать полный тур или частичный, с посещением первых 3 мест</p>
         <ul class="destinations__list list">
           <li class="destinations__item">
-            <a class="destinations__card link" href="">
+            <a class="destinations__card link" href="#greece-card">
               <picture class="destinations__card-photo">
                 <source media="(max-width: 767px)"
                   srcset="img/destinations-greece-mobile@1x.png 1x, img/destinations-greece-mobile@2x.png 2x">
@@ -76,7 +76,7 @@
             </a>
           </li>
           <li class="destinations__item">
-            <a class="destinations__card link" href="">
+            <a class="destinations__card link" href="#albania-card">
               <picture class="destinations__card-photo">
                 <source media="(max-width: 767px)"
                   srcset="img/destinations-albania-mobile@1x.png 1x, img/destinations-albania-mobile@2x.png 2x">
@@ -91,7 +91,7 @@
             </a>
           </li>
           <li class="destinations__item">
-            <a class="destinations__card link" href="">
+            <a class="destinations__card link" href="#macedonia-card">
               <picture class="destinations__card-photo">
                 <source media="(max-width: 767px)"
                   srcset="img/destinations-macedonia-mobile@1x.png 1x, img/destinations-macedonia-mobile@2x.png 2x">
@@ -106,7 +106,7 @@
             </a>
           </li>
           <li class="destinations__item">
-            <a class="destinations__card link" href="">
+            <a class="destinations__card link" href="#montenegro-card">
               <picture class="destinations__card-photo">
                 <source media="(max-width: 767px)"
                   srcset="img/destinations-montenegro-mobile@1x.png 1x, img/destinations-montenegro-mobile@2x.png 2x">
@@ -121,7 +121,7 @@
             </a>
           </li>
           <li class="destinations__item">
-            <a class="destinations__card link" href="">
+            <a class="destinations__card link" href="#croatia-card">
               <picture class="destinations__card-photo">
                 <source media="(max-width: 767px)"
                   srcset="img/destinations-croatia-mobile@1x.png 1x, img/destinations-croatia-mobile@2x.png 2x">
@@ -138,7 +138,7 @@
         </ul>
       </div>
     </section>
-    <section class="main__tour tour">
+    <section class="main__tour tour" id="tour-section">
       <h2 class="visually-hidden">Информация о турах</h2>
       <div class="tour__wrapper container">
         <ul class="tour__list-short list">
@@ -159,7 +159,7 @@
           </li>
         </ul>
         <ul class="tour__list list">
-          <li class="tour__item tour__item--current">
+          <li class="tour__item tour__item--current" id="greece-card">
             <div class="tour__about">
               <h3 class="tour__country">Греция</h3>
               <p class="tour__info">На севере Греции находится один из крупнейших комплексов монастырей,
@@ -196,7 +196,7 @@
               </div>
             </div>
           </li>
-          <li class="tour__item">
+          <li class="tour__item" id="albania-card">
             <div class="tour__about">
               <h3 class="tour__country">Албания</h3>
               <p class="tour__info">В Албании мы посетим Курорт Ксамиль. Этот курорт поразит вас чистейшей водой и
@@ -231,7 +231,7 @@
               </div>
             </div>
           </li>
-          <li class="tour__item">
+          <li class="tour__item" id="macedonia-card">
             <div class="tour__about">
               <h3 class="tour__country">Македония</h3>
               <p class="tour__info">В Македонии нашей целью будет посетить Палаошник, который расположился в
@@ -267,7 +267,7 @@
               </div>
             </div>
           </li>
-          <li class="tour__item">
+          <li class="tour__item" id="montenegro-card">
             <div class="tour__about">
               <h3 class="tour__country">Черногория</h3>
               <p class="tour__info">Черногория удивит нас самым большим в Европе каньоном реки Тара, который в
@@ -300,7 +300,7 @@
               </div>
             </div>
           </li>
-          <li class="tour__item">
+          <li class="tour__item" id="croatia-card">
             <div class="tour__about">
               <h3 class="tour__country">Хорватия</h3>
               <p class="tour__info">В Хорватии мы посетим необычайную пещеру названную Бередине. Ее подземный мир
@@ -513,6 +513,8 @@
       <button class="modal__submit-button button" type="submit">Отправить</button>
     </form>
   </section>
+
+  <script type="module" src="js/main.js"></script>
 </body>
 
 </html>
