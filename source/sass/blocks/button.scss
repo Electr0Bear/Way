@@ -5,6 +5,7 @@
   font-size: 12px;
   line-height: 15px;
   letter-spacing: 2px;
+  text-align: center;
   text-decoration: none;
   text-transform: uppercase;
   color: $white;
@@ -12,5 +13,11 @@
 
   &:active {
     background-color: $extraAccent;
+  }
+
+  @media (max-width: $tabletMax) {
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
   }
 }

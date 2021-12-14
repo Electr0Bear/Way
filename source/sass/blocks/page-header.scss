@@ -6,11 +6,27 @@
 
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     background-image: url("../img/page-header-background@2x.png");
+    background-size: 100% 860px;
+  }
+
+  @media (max-width: $tabletMax) {
+    height: 344px;
+    background-image: url("../img/page-header-background-tablet@1x.png");
+  }
+
+  @media (max-width: $tabletMax) and (min-resolution: 144dpi),
+    (max-width: $tabletMax) and (min-resolution: 1.5dppx) {
+    background-image: url("../img/page-header-background-tablet@2x.png");
+    background-size: 100% 344px;
   }
 }
 
 .page-header__wrapper {
   padding: 185px 150px 0 700px;
+
+  @media (max-width: $tabletMax) {
+    padding: 60px 185px 83px 185px;
+  }
 }
 
 .page-header__title {
@@ -21,6 +37,13 @@
   line-height: 80px;
   letter-spacing: -1.11px;
   color: $white;
+
+  @media (max-width: $tabletMax) {
+    margin: 0 0 15px 0;
+    font-size: 30px;
+    line-height: 45px;
+    text-align: center;
+  }
 }
 
 .page-header__descritpion {
@@ -30,13 +53,29 @@
   line-height: 27px;
   letter-spacing: -0.47px;
   color: $white;
+
+  @media (max-width: $tabletMax) {
+    margin: 0 0 15px 0;
+    padding: 0;
+    font-size: 16px;
+    line-height: 27px;
+    text-align: center;
+    letter-spacing: -0.47px;
+  }
 }
 
 .page-header__button {
+  margin: 0 auto;
   padding: 30px 40px 30px 40px;
   display: flex;
+  align-items: center;
   justify-content: space-between;
   width: 340px;
+
+  @media (max-width: $tabletMax) {
+    padding: 19px 40px 19px 40px;
+    width: 250px;
+  }
 }
 
 .page-header__button-icon {

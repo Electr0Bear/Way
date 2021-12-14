@@ -2,6 +2,10 @@
   background-image: url("../img/tour-background.svg");
   background-position: center, center;
   background-repeat: no-repeat;
+
+  @media (max-width: $tabletMax) {
+    background-image: none;
+  }
 }
 
 .tour__list-short {
@@ -10,6 +14,11 @@
   display: flex;
   width: fit-content;
   border-bottom: 1px solid $basicDarkOpacue03;
+
+  @media (max-width: $tabletMax) {
+    margin-bottom: 30px;
+    overflow: hidden;
+  }
 }
 
 .tour__item-short:not(:last-child) {
@@ -29,7 +38,11 @@
 }
 
 .tour__list {
-  margin-bottom: 234px;
+  margin: 0 0 234px 0;
+
+  @media (max-width: $tabletMax) {
+    margin: 0 0 80px 0;
+  }
 }
 
 .tour__item {
@@ -39,10 +52,19 @@
   &--current {
     display: grid;
   }
+
+  @media (max-width: $tabletMax) {
+    grid-template-columns: auto;
+    grid-template-rows: auto 447px;
+  }
 }
 
 .tour__about {
-  padding-top: 15px;
+  padding: 15px 100px 0 0;
+
+  @media (max-width: $tabletMax) {
+    padding: 0 21px 30px 21px;
+  }
 }
 
 .tour__country {
@@ -62,24 +84,51 @@
     height: 3px;
     background-color: $basicAccent;
   }
+
+  @media (max-width: $tabletMax) {
+    margin: 0 0 20px 0;
+    font-size: 30px;
+    line-height: 45px;
+    text-align: center;
+
+    &::before {
+      display: none;
+    }
+  }
 }
 
 .tour__info {
   margin: 0 0 50px 0;
-  padding-right: 100px;
   font-size: 16px;
   line-height: 28px;
   letter-spacing: -0.47px;
   color: $basicDarkOpacue07;
+
+  @media (max-width: $tabletMax) {
+    margin: 0 0 20px 0;
+    text-align: center;
+  }
 }
 
 .tour__button {
-  padding: 30px 39px;
+  padding: 30px 0;
   width: 250px;
+
+  @media (max-width: $tabletMax) {
+    margin: 0 auto;
+    padding: 19px 0;
+  }
 }
 
 .tour__review-section {
   position: relative;
+}
+
+.tour__photo img {
+  @media (max-width: $tabletMax) {
+    width: 100%;
+    height: 415px;
+  }
 }
 
 .tour__review {
@@ -89,6 +138,11 @@
   right: 0;
   width: 382px;
   background: $white;
+
+  @media (max-width: $tabletMax) {
+    top: 80px;
+    right: calc(50% - 191px);
+  }
 }
 
 .tour__review-title {

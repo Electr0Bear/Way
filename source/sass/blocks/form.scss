@@ -14,6 +14,18 @@
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     background-image: url("../img/form-background@2x.png");
   }
+
+  @media (max-width: $tabletMax) {
+    padding: 70px 0;
+    justify-content: center;
+    background-image: url("../img/form-background-tablet@1x.png");
+    background-size: 100% 455px;
+  }
+
+  @media (max-width: $tabletMax) and (min-resolution: 144dpi),
+    (max-width: $tabletMax) and (min-resolution: 1.5dppx) {
+    background-image: url("../img/form-background-tablet@2x.png");
+  }
 }
 
 .form__body {
@@ -25,6 +37,8 @@
   background-color: $white;
   box-shadow: 0px 4px 30px $basicDarkOpacue01;
   border-radius: 5px;
+
+
 }
 
 .form__heading {

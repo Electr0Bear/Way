@@ -1,22 +1,76 @@
 .rates {
   margin-bottom: 140px;
   display: flex;
+
+  @media (max-width: $tabletMax) {
+    margin-bottom: 110px;
+    flex-direction: column;
+  }
 }
 
 .rates__list {
   display: flex;
+
+  @media (max-width: $tabletMax) {
+    order: 2;
+    justify-content: center;
+  }
 }
 
 .rates__item {
-  margin-right: 30px;
   padding: 30px;
   display: grid;
+  position: relative;
   grid-template-columns: 1fr min-content;
-  grid-template-rows: auto auto 1fr min-content;
+  grid-template-rows: auto auto 1fr auto;
   width: 370px;
   border: 1px solid $basicDarkOpacue03;
   border-radius: 6px;
   background-color: $white;
+
+  &:first-child {
+    margin-right: 30px;
+  }
+
+  @media (max-width: $tabletMax) {
+    padding: 30px 20px 0 20px ;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto 1fr 50px;
+    width: 288px;
+
+    &:first-child {
+      margin-right: 50px;
+    }
+  }
+}
+
+.rates__item:hover {
+  border: 1px solid $basicAccent;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    display: block;
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+    border: 3px solid $basicAccent;
+    border-radius: 6px;
+  }
+
+  & .rates__item-heading,
+  & .rates__item-price {
+    color: $basicAccent;
+  }
+
+  & .rates__feature-item {
+    color: $extraDark;
+  }
+
+  & .rates__feature-list {
+    border-top: 1px solid $basicAccentOpacue05;
+  }
 }
 
 .rates__item-heading {
@@ -29,6 +83,14 @@
   line-height: 38px;
   letter-spacing: -1.27px;
   color: $extraDarkOpacue07;
+
+  @media (max-width: $tabletMax) {
+    margin: 0 0 10px 0;
+    grid-column: 1 / 2;
+    text-align: center;
+    font-size: 24px;
+    line-height: 34px;
+  }
 }
 
 .rates__item-price {
@@ -38,6 +100,13 @@
   font-size: 25px;
   line-height: 34px;
   color: $extraDarkOpacue07;
+
+  @media (max-width: $tabletMax) {
+    margin: 0 0 11px 0;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    text-align: center;
+  }
 }
 
 .rates__item-text {
@@ -46,6 +115,13 @@
   margin: 0 0 28px 0;
   font-size: 16px;
   line-height: 24px;
+
+  @media (max-width: $tabletMax) {
+    margin: 0 0 10px 0;
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    text-align: center;
+  }
 }
 
 .rates__feature-list {
@@ -53,6 +129,12 @@
   grid-column: 1 / 3;
   grid-row: 3 / 4;
   border-top: 1px solid $basicDarkOpacue03;
+
+  @media (max-width: $tabletMax) {
+    padding-top: 20px;
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+  }
 }
 
 .rates__feature-item {
@@ -82,10 +164,26 @@
   grid-row: 4 / 5;
   width: 310px;
   text-align: center;
+
+  @media (max-width: $tabletMax) {
+    padding: 19px 0;
+    width: calc(100% + 42px);
+    position: absolute;
+    left: -21px;
+    bottom: -1px;
+    grid-column: 1 / 2;
+    grid-row: 5 / 6;
+  }
 }
 
 .rates__info {
   padding-left: 64px;
+
+  @media (max-width: $tabletMax) {
+    padding: 0 21px;
+    text-align: center;
+    order: 1;
+  }
 }
 
 .rates__heading {
@@ -104,26 +202,46 @@
     height: 3px;
     background-color: $basicAccent;
   }
+
+  @media (max-width: $tabletMax) {
+    margin: 0 0 20px 0;
+    font-size: 30px;
+    line-height: 45px;
+
+    &::before {
+      display: none;
+    }
+  }
 }
 
 .rates__text {
-  margin: 0;
+  margin: 0 0 60px 0;
   font-size: 16px;
   line-height: 27px;
   color: $basicDarkOpacue07;
+
+  @media (max-width: $tabletMax) {
+    margin: 0 0 30px 0;
+  }
 }
 
 .rates__contact-heading {
-  margin-left: 50px;
+  margin: 0 0 13px 50px;
   font-weight: 500;
   font-size: 22px;
   line-height: 34px;
+
+  @media (max-width: $tabletMax) {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+  }
 }
 
 .rates__phone {
   color: $basicAccent;
   display: flex;
   align-items: center;
+  width: fit-content;
 
   & svg {
     margin-right: 20px;
@@ -137,11 +255,25 @@
     line-height: 32px;
     color: $black;
   }
+
+  @media (max-width: $tabletMax) {
+    margin: 0 auto 40px auto;
+
+    & svg {
+      display: none;
+    }
+
+    & span {
+      font-size: 18px;
+      color: $basicAccent;
+      text-decoration: underline;
+    }
+  }
 }
 
 .rates__phone:hover,
 .rates__phone:focus {
   & span {
-  color: $basicAccent;
+    color: $basicAccent;
   }
 }

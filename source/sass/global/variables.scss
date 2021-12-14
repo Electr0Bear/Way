@@ -2,12 +2,12 @@
 $monserrat: "Monserrat", arial, sans-serif;
 
 //Content width
-$desktopMin: 1024px;
 $desktopMax: 1170px;
-$tabletMin: 768px;
+$desktopMin: 1024px;
 $tabletMax: 1023px;
-$mobileMin: 320px;
+$tabletMin: 768px;
 $mobileMax: 767px;
+$mobileMin: 320px;
 
 //Resolution
 $desktop: 1440px;
@@ -25,6 +25,7 @@ $extraDarkOpacue05: rgba(20, 21, 23, 0.5);
 $extraDarkOpacue06: rgba(20, 21, 23, 0.6);
 $extraDarkOpacue07: rgba(20, 21, 23, 0.7);
 $basicAccent: rgba(254, 120, 101, 1);
+$basicAccentOpacue05: rgba(254, 120, 101, 0.5);
 $extraAccent: rgba(241, 125, 75, 1);
 $extraGrey: rgba(215, 217, 223, 1);
 

@@ -1,7 +1,13 @@
 .footer {
-  padding-top: 20px;
+  padding: 20px 0 74px 0;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+
+  @media (max-width: $tabletMax) {
+    padding: 20px 21px 54px 21px;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+  }
 }
 
 .footer__heading {
@@ -15,6 +21,11 @@
 .footer__tours {
   padding: 0 30px 12px 0;
   border-right: 1px solid $extraGrey;
+
+  @media (max-width: $tabletMax) {
+    margin: 0 0 30px 0;
+    padding: 0 50px 12px 0;
+  }
 }
 
 .footer__tours-list {
@@ -32,6 +43,11 @@
 .footer__contacts {
   padding: 0 30px;
   border-right: 1px solid $extraGrey;
+
+  @media (max-width: $tabletMax) {
+    padding: 0 23px 0 50px;
+    border: none;
+  }
 }
 
 .footer__contacts-link {
@@ -54,6 +70,39 @@
   }
 }
 
+.footer__contacts-email {
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.footer__contacts-phone {
+  font-size: 16px;
+  line-height: 32px;
+}
+
 .footer__business-tours {
-  padding-left: 30px;
+  padding: 0 0 0 30px;
+
+  @media (max-width: $tabletMax) {
+    padding: 30px 0 0 0;
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+    border-top: 1px solid $extraGrey;
+  }
+}
+
+.footer__business-tours-heading {
+  @media (max-width: $tabletMax) {
+    text-align: center;
+  }
+}
+
+.footer__business-tours-about {
+  font-size: 14px;
+  line-height: 24px;
+  color: $extraDarkOpacue05;
+
+  @media (max-width: $tabletMax) {
+    text-align: center;
+  }
 }
