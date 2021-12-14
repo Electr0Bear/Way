@@ -19,6 +19,10 @@
     margin-bottom: 30px;
     overflow: hidden;
   }
+
+  @media (max-width: $mobileMax) {
+    padding: 0 16px;
+  }
 }
 
 .tour__item-short:not(:last-child) {
@@ -65,6 +69,10 @@
   @media (max-width: $tabletMax) {
     padding: 0 21px 30px 21px;
   }
+
+  @media (max-width: $mobileMax) {
+    padding: 0 16px 50px 16px;
+  }
 }
 
 .tour__country {
@@ -94,6 +102,11 @@
     &::before {
       display: none;
     }
+  }
+
+  @media (max-width: $mobileMax) {
+    font-size: 24px;
+    line-height: 36px;
   }
 }
 
@@ -143,6 +156,13 @@
     top: 80px;
     right: calc(50% - 191px);
   }
+
+  @media (max-width: $mobileMax) {
+    padding: 30px 20px;
+    top: 50px;
+    width: 268px;
+    right: calc(50% - 134px);
+  }
 }
 
 .tour__review-title {
@@ -162,6 +182,17 @@
     height: 1px;
     background-color: $basicAccent;
   }
+
+  @media (max-width: $mobileMax) {
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+
+    &::before {
+      left: calc(50% - 34px);
+      bottom: -10px;
+    }
+  }
 }
 
 .tour__review-text {
@@ -170,15 +201,28 @@
   line-height: 28px;
   letter-spacing: -0.41px;
   color: $basicDarkOpacue07;
+
+  @media (max-width: $mobileMax) {
+    margin: 0 0 20px 0;
+    text-align: center;
+  }
 }
 
 .tour__review-author {
   display: flex;
   align-items: center;
+
+  @media (max-width: $mobileMax) {
+    flex-direction: column;
+  }
 }
 
 .tour__review-author-photo {
-  margin-right: 16px;
+  margin: 0 16px 0 0;
+
+  @media (max-width: $mobileMax) {
+    margin: 0 0 10px 0;
+  }
 }
 
 .tour__review-author-photo img {

@@ -1,5 +1,9 @@
 .form {
   margin-bottom: 160px;
+
+  @media (max-width: $mobileMax) {
+    margin-bottom: 60px;
+  }
 }
 
 .form__wrapper {
@@ -16,7 +20,6 @@
   }
 
   @media (max-width: $tabletMax) {
-    padding: 70px 0;
     justify-content: center;
     background-image: url("../img/form-background-tablet@1x.png");
     background-size: 100% 455px;
@@ -25,6 +28,11 @@
   @media (max-width: $tabletMax) and (min-resolution: 144dpi),
     (max-width: $tabletMax) and (min-resolution: 1.5dppx) {
     background-image: url("../img/form-background-tablet@2x.png");
+  }
+
+  @media (max-width: $mobileMax) {
+    padding: 0;
+    background-image: none;
   }
 }
 
@@ -38,7 +46,12 @@
   box-shadow: 0px 4px 30px $basicDarkOpacue01;
   border-radius: 5px;
 
-
+  @media (max-width: $mobileMax) {
+    padding: 50px 16px;
+    width: 100%;
+    background-color: $extraGrey2;
+    box-shadow: none;
+  }
 }
 
 .form__heading {
@@ -46,12 +59,20 @@
   font-weight: 600;
   font-size: 25px;
   line-height: 32px;
+
+  @media (max-width: $mobileMax) {
+    text-align: center;
+  }
 }
 
 .form__text {
   margin: 0 0 24px 0;
   font-size: 16px;
   line-height: 24px;
+
+  @media (max-width: $mobileMax) {
+    text-align: center;
+  }
 }
 
 .form__inputs {
@@ -59,6 +80,10 @@
   width: 100%;
   display: flex;
   flex-wrap: nowrap;
+
+  @media (max-width: $mobileMax) {
+    flex-direction: column;
+  }
 }
 
 .form__inputs input {
@@ -68,9 +93,13 @@
   font-size: 14px;
   line-height: 17px;
   color: $extraDark;
+}
 
-  &:first-child {
-    margin-right: 19px;
+.form__input-phone {
+  margin: 0 19px 0 0;
+
+  @media (max-width: $mobileMax) {
+    margin: 0 0 20px 0;
   }
 }
 
@@ -79,4 +108,8 @@
   width: 176px;
   text-align: center;
   border: none;
+
+  @media (max-width: $mobileMax) {
+    width: 288px;
+  }
 }

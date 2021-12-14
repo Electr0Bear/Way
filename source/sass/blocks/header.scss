@@ -4,6 +4,10 @@
   @media (max-width: $tabletMax) {
     padding: 0 0 0 21px;
   }
+
+  @media (max-width: $mobileMax) {
+    padding: 0 0 0 16px;
+  }
 }
 
 .header__wrapper {
@@ -17,6 +21,13 @@
 
   @media (max-width: $tabletMax) {
     padding: 17px 0 16px 0;
+  }
+}
+
+.header__logo img {
+  @media (max-width: $tabletMax) {
+    width: 44px;
+    height: 17px;
   }
 }
 
@@ -71,9 +82,22 @@
   display: none;
 
   @media (max-width: $tabletMax) {
+    position: relative;
     display: block;
     width: 72px;
     height: 100%;
     background-color: $basicAccent;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 17.5px;
+      left: 24.5px;
+      display: block;
+      width: 22px;
+      height: 1px;
+      background-color: $white;
+      box-shadow: 0 7px 0 0 $white, 0 14px 0 0 $white;
+    }
   }
 }
