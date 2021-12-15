@@ -88,16 +88,29 @@
     height: 100%;
     background-color: $basicAccent;
 
-    &::before {
-      content: "";
-      position: absolute;
-      top: 17.5px;
-      left: 24.5px;
+    // &::before {
+    //   content: "";
+    //   position: absolute;
+    //   top: 17.5px;
+    //   left: 24.5px;
+    //   display: block;
+    //   width: 22px;
+    //   height: 1px;
+    //   background-color: $white;
+    //   box-shadow: 0 7px 0 0 $white, 0 14px 0 0 $white;
+    // }
+  }
+}
+
+.header__menu-button-open,
+.header__menu-button-close {
+  display: none;
+  width: 22px;
+  height: 22px;
+
+  @media (max-width: $tabletMax) {
+    &--active {
       display: block;
-      width: 22px;
-      height: 1px;
-      background-color: $white;
-      box-shadow: 0 7px 0 0 $white, 0 14px 0 0 $white;
     }
   }
 }

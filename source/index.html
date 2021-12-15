@@ -35,6 +35,12 @@
           </li>
         </ul>
         <a class="header__menu-button header__menu-button--closed">
+          <svg class="header__menu-button-open header__menu-button-open--active">
+            <use xlink:href="img/icons/sprite_auto.svg#icon-burger-menu"></use>
+          </svg>
+          <svg class="header__menu-button-close">
+            <use xlink:href="img/icons/sprite_auto.svg#icon-cross"></use>
+          </svg>
           <span class="visually-hidden">Открыть меню</span>
         </a>
       </nav>
@@ -368,7 +374,7 @@
                 <span>Экскурсии по удивительно красивым местам Европы</span>
               </li>
             </ul>
-            <a class="rates__button button" href="">Купить тур сейчас</a>
+            <a class="rates__button button">Купить тур сейчас</a>
           </li>
           <li class="rates__item">
             <h4 class="rates__item-heading">Экономный</h4>
@@ -406,7 +412,7 @@
                 <span>Экскурсии по удивительно красивым местам Европы</span>
               </li>
             </ul>
-            <a class="rates__button button" href="">Купить тур сейчас</a>
+            <a class="rates__button button">Купить тур сейчас</a>
           </li>
         </ul>
         <div class="rates__info">
@@ -426,7 +432,7 @@
     <section class="main__form form container">
       <div class="form__wrapper">
         <h2 class="visually-hidden">Форма обратной связи</h2>
-        <form class="form__body" action="" method="POST">
+        <form class="form__body" method="POST">
           <h3 class="form__heading">У Вас остались вопросы?</h3>
           <p class="form__text">Оставьте свой номер или e-mail и мы свяжемся с Вами</p>
           <div class="form__inputs">
@@ -503,15 +509,21 @@
     </div>
   </footer>
   <!-- Модальное окно -->
-  <section class="modal">
-    <form action="" method="POST">
-      <h3>Купить тур</h3>
+  <section class="modal modal--show">
+    <form class="modal__form" method="POST">
+      <h3 class="modal__heading">Купить тур</h3>
       <input class="modal__input-phone" type="text" name="phone" id="modal-phone-input">
       <label class="visually-hidden" for="modal-phone-input">Ваш номер телефона</label>
       <input class="modal__input-email" type="email" name="e-mail" id="modal-email-input">
       <label class="visually-hidden" for="modal-email-input">Ваш e-mail</label>
       <button class="modal__submit-button button" type="submit">Отправить</button>
     </form>
+    <a class="modal__close-button">
+      <svg>
+        <use xlink:href="img/icons/sprite_auto.svg#icon-cross"></use>
+      </svg>
+      <span class="visually-hidden">Закрыть окно</span>
+    </a>
   </section>
 
   <script type="module" src="js/main.js"></script>

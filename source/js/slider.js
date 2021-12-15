@@ -13,17 +13,21 @@ var onClickCountry = function (i) {
   }
 };
 
-destinationArr.forEach(function (element) {
-  element.addEventListener('click', function (evt) {
-    var index = Array.from(destinationArr).indexOf(evt.target);
-    onClickCountry(index);
+var sliderHandler = function () {
+  destinationArr.forEach(function (element) {
+    element.addEventListener('click', function (evt) {
+      var index = Array.from(destinationArr).indexOf(evt.target);
+      onClickCountry(index);
+    });
   });
-});
 
-countryArr.forEach(function (element) {
-  element.addEventListener('click', function (evt) {
-    evt.preventDefault();
-    var index = Array.from(countryArr).indexOf(evt.target);
-    onClickCountry(index);
+  countryArr.forEach(function (element) {
+    element.addEventListener('click', function (evt) {
+      evt.preventDefault();
+      var index = Array.from(countryArr).indexOf(evt.target);
+      onClickCountry(index);
+    });
   });
-});
+};
+
+export {sliderHandler};
