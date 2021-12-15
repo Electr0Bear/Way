@@ -21,9 +21,15 @@
         <ul class="header__nav-list list">
           <li class="header__nav-item">
             <a class="header__nav-item-link link">О путешествии</a>
+            <svg>
+              <use xlink:href="img/icons/sprite_auto.svg#icon-arrow-left"></use>
+            </svg>
           </li>
           <li class="header__nav-item">
             <a class="header__nav-item-link link">Цены</a>
+            <svg>
+              <use xlink:href="img/icons/sprite_auto.svg#icon-arrow-left"></use>
+            </svg>
           </li>
           <li class="header__nav-phone">
             <a class="header__nav-phone-link" href="tel:+749978468446">
@@ -34,11 +40,11 @@
             </a>
           </li>
         </ul>
-        <a class="header__menu-button header__menu-button--closed">
-          <svg class="header__menu-button-open header__menu-button-open--active">
+        <a class="header__menu-button">
+          <svg class="header__menu-button-open">
             <use xlink:href="img/icons/sprite_auto.svg#icon-burger-menu"></use>
           </svg>
-          <svg class="header__menu-button-close">
+          <svg class="header__menu-button-close header__menu-button-open--active">
             <use xlink:href="img/icons/sprite_auto.svg#icon-cross"></use>
           </svg>
           <span class="visually-hidden">Открыть меню</span>
@@ -217,7 +223,7 @@
                 <source media="(max-width: 767px)"
                   srcset="img/destinations-albania-mobile@1x.png 1x, img/destinations-albania-mobile@2x.png 2x">
                 <source media="(max-width: 1023px)"
-                  srcset="img/tour-albania-tablet@1x.png 1x, img/tour-albania-tablet@2x.png 2x">
+                  srcset="img/destinations-albania-tablet@1x.png 1x, img/destinations-albania-tablet@2x.png 2x">
                 <!-- <source type="image/webp" srcset="img/tour-albania@1x.webp 1x, img/tour-albania@2x.webp 2x"> -->
                 <img src="img/tour-albania@1x.png" srcset="img/tour-albania@2x.png 2x" width="430" height="596"
                   alt="Албания">
@@ -252,7 +258,7 @@
                 <source media="(max-width: 767px)"
                   srcset="img/destinations-macedonia-mobile@1x.png 1x, img/destinations-macedonia-mobile@2x.png 2x">
                 <source media="(max-width: 1023px)"
-                  srcset="img/tour-macedonia-tablet@1x.png 1x, img/tour-macedonia-tablet@2x.png 2x">
+                  srcset="img/destinations-macedonia-tablet@1x.png 1x, img/destinations-macedonia-tablet@2x.png 2x">
                 <!-- <source type="image/webp" srcset="img/tour-macedonia@1x.webp 1x, img/tour-macedonia@2x.webp 2x"> -->
                 <img src="img/tour-macedonia@1x.png" srcset="img/tour-macedonia@2x.png 2x" width="430" height="596"
                   alt="Македония">
@@ -286,7 +292,7 @@
                 <source media="(max-width: 767px)"
                   srcset="img/destinations-montenegro-mobile@1x.png 1x, img/destinations-montenegro-mobile@2x.png 2x">
                 <source media="(max-width: 1023px)"
-                  srcset="img/tour-montenegro-tablet@1x.png 1x, img/tour-montenegro-tablet@2x.png 2x">
+                  srcset="img/destinations-montenegro-tablet@1x.png 1x, img/destinations-montenegro-tablet@2x.png 2x">
                 <!-- <source type="image/webp" srcset="img/tour-montenegro@1x.webp 1x, img/tour-montenegro@2x.webp 2x"> -->
                 <img src="img/tour-montenegro@1x.png" srcset="img/tour-montenegro@2x.png 2x" width="430" height="596"
                   alt="Черногория">
@@ -319,7 +325,7 @@
                 <source media="(max-width: 767px)"
                   srcset="img/destinations-croatia-mobile@1x.png 1x, img/destinations-croatia-mobile@2x.png 2x">
                 <source media="(max-width: 1023px)"
-                  srcset="img/tour-croatia-tablet@1x.png 1x, img/tour-croatia-tablet@2x.png 2x">
+                  srcset="img/destinations-croatia-tablet@1x.png 1x, img/destinations-croatia-tablet@2x.png 2x">
                 <!-- <source type="image/webp" srcset="img/tour-croatia@1x.webp 1x, img/tour-croatia@2x.webp 2x"> -->
                 <img src="img/tour-croatia@1x.png" srcset="img/tour-croatia@2x.png 2x" width="430" height="596"
                   alt="Хорватия">
@@ -437,7 +443,7 @@
           <p class="form__text">Оставьте свой номер или e-mail и мы свяжемся с Вами</p>
           <div class="form__inputs">
             <input class="form__input-phone" type="text" name="phone" id="form-phone-input"
-              placeholder="Введите 10 цифр номера" value="+7">
+              placeholder="Введите 10 цифр номера">
             <label class="visually-hidden" for="form-phone-input">Ваш номер телефона</label>
             <input class="form__input-email" type="email" name="e-mail" id="form-email-input" placeholder="E-mail">
             <label class="visually-hidden" for="form-email-input">Ваш e-mail</label>
@@ -509,12 +515,12 @@
     </div>
   </footer>
   <!-- Модальное окно -->
-  <section class="modal modal--show">
+  <section class="modal">
     <form class="modal__form" method="POST">
       <h3 class="modal__heading">Купить тур</h3>
-      <input class="modal__input-phone" type="text" name="phone" id="modal-phone-input">
+      <input class="modal__input-phone" type="text" name="phone" id="modal-phone-input" placeholder="Введите 10 цифр номера" required>
       <label class="visually-hidden" for="modal-phone-input">Ваш номер телефона</label>
-      <input class="modal__input-email" type="email" name="e-mail" id="modal-email-input">
+      <input class="modal__input-email" type="email" name="e-mail" id="modal-email-input" placeholder="Email">
       <label class="visually-hidden" for="modal-email-input">Ваш e-mail</label>
       <button class="modal__submit-button button" type="submit">Отправить</button>
     </form>

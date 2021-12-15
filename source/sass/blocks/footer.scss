@@ -74,7 +74,7 @@
 }
 
 .footer__contacts {
-  padding: 0 30px;
+  padding: 0 60px;
   border-right: 1px solid $extraGrey;
 
   @media (max-width: $tabletMax) {
@@ -96,7 +96,7 @@
 }
 
 .footer__contacts-link {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -126,7 +126,7 @@
 }
 
 .footer__business-tours {
-  padding: 0 0 0 30px;
+  padding: 0 0 0 60px;
 
   @media (max-width: $tabletMax) {
     padding: 30px 0 0 0;

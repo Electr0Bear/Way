@@ -5,7 +5,6 @@
   top: calc(50% - 222px);
   left: calc(50% - 364px);
   width: 728px;
-  height: 444px;
   z-index: 2;
   background-color: $extraGrey2;
   background-image: url("../img/modal-buy-tour@1x.png");
@@ -16,6 +15,16 @@
   &--show {
     display: block;
   }
+
+  @media (max-width: $mobileMax) {
+    padding: 0;
+    background-color: $white;
+    top: calc(50% - 284px);
+    left: calc(50% - 160px);
+    width: 320px;
+    background-image: none;
+
+  }
 }
 
 .modal__form {
@@ -23,6 +32,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (max-width: $mobileMax) {
+    padding: 100px 16px;
+  }
 }
 
 .modal__heading {
