@@ -5,6 +5,7 @@
   top: calc(50% - 222px);
   left: calc(50% - 364px);
   width: 728px;
+  min-height: 444px;
   z-index: 2;
   background-color: $extraGrey2;
   background-image: url("../img/modal-buy-tour@1x.png");
@@ -22,6 +23,7 @@
     top: calc(50% - 284px);
     left: calc(50% - 160px);
     width: 320px;
+    min-height: 568px;
     background-image: none;
 
   }

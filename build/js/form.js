@@ -1,9 +1,10 @@
 'use strict';
 
-var feedbackForm = document.querySelector('.form');
 var phoneInput = document.querySelector('.form__input-phone');
 var emailInput = document.querySelector('.form__input-email');
 var submitBtn = document.querySelector('.form__submit-button');
+var modal = document.querySelector('.modal');
+var buyTourForm = document.querySelector('.modal__form');
 var modalPhoneInput = document.querySelector('.modal__input-phone');
 var modalEmailInput = document.querySelector('.modal__input-email');
 var modalSubmitBtn = document.querySelector('.modal__submit-button');
@@ -51,9 +52,20 @@ var checkFormValidity = function () {
 };
 
 var onSubmitForm = function () {
-  feedbackForm.addEventListener('submit', function (evt) {
+  buyTourForm.addEventListener('submit', function (evt) {
     evt.preventDefault();
-    console.log(12);
+    modal.style = "padding: 0; background-image: none";
+    modal.innerHTML = `<div style="padding-top: 179px; display: flex; justify-content: center; width: 100%; height: auto; background-color: $extraGrey2">
+      <span style="font-weight: 500; font-size: 25px; line-height: 43px; text-align: center; color: $extraDark2">
+        Форма успешно отправлена,<br> спасибо! :)
+      </span>
+    </div>
+    <a class="modal__close-button">
+      <svg>
+        <use xlink:href="img/icons/sprite_auto.svg#icon-cross"></use>
+      </svg>
+      <span class="visually-hidden">Закрыть окно</span>
+    </a>`;
   });
 };
 
