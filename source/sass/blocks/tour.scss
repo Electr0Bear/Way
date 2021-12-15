@@ -154,6 +154,7 @@
   background: $white;
 
   @media (max-width: $tabletMax) {
+    padding: 30px 30px 28px 30px;
     top: 80px;
     right: calc(50% - 191px);
   }

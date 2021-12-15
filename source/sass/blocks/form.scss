@@ -1,7 +1,7 @@
 .form {
   margin-bottom: 135px;
 
-  @media (max-width: $mobileMax) {
+  @media (max-width: $tabletMax) {
     margin-bottom: 60px;
   }
 }
@@ -81,6 +81,10 @@
   display: flex;
   flex-wrap: nowrap;
 
+  @media (max-width: $tabletMax) {
+    margin-bottom: 18px;
+  }
+
   @media (max-width: $mobileMax) {
     flex-direction: column;
   }
@@ -108,6 +112,10 @@
   width: 176px;
   text-align: center;
   border: none;
+
+  @media (max-width: $tabletMax) {
+    width: 250px;
+  }
 
   @media (max-width: $mobileMax) {
     width: 288px;
