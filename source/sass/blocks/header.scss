@@ -38,7 +38,7 @@
   align-items: center;
 
   @media (max-width: $tabletMax) {
-    padding: 84px 0 0 0;
+    padding: 84px 0 254px 0;
     position: absolute;
     top: 50px;
     right: 0;
@@ -87,6 +87,10 @@
     font-size: 20px;
     line-height: 28px;
     color: $extraDark2;
+  }
+
+  &:hover {
+    color: $basicAccent;
   }
 }
 
