@@ -24,6 +24,7 @@
   color: $extraDark;
 
   @media (max-width: $mobileMax) {
+    margin: 3px 0 20px 0;
     text-align: center;
   }
 }
@@ -38,7 +39,7 @@
   }
 
   @media (max-width: $mobileMax) {
-    padding: 0 0 20px 0;
+    padding: 0 0 8px 0;
     border-right: none;
     border-bottom: 1px solid $extraGrey;
   }
@@ -51,6 +52,12 @@
   @media (max-width: $mobileMax) {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
+  }
+}
+
+.footer__tours-item {
+  @media (max-width: $mobileMax) {
+    margin: 0 0 10px 0;
   }
 }
 
@@ -83,7 +90,7 @@
   }
 
   @media (max-width: $mobileMax) {
-    padding: 0;
+    padding: 17px 0 12px 0;
   }
 }
 
@@ -136,6 +143,7 @@
   }
 
   @media (max-width: $mobileMax) {
+    padding: 27px 0 0 0;
     grid-column: 1 / 2;
     grid-row: 3 / 4;
   }

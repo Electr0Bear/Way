@@ -46,6 +46,7 @@
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto 1fr 50px;
     width: 288px;
+    min-height: 629px;
 
     &:first-child {
       margin-right: 50px;
@@ -179,7 +180,7 @@
 
   @media (max-width: $mobileMax) {
     line-height: 31px;
-    margin-bottom: 9px;
+    margin-bottom: 10px;
   }
 }
 
