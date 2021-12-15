@@ -138,6 +138,10 @@
       background-color: $basicAccent;
     }
   }
+
+  @media (max-width: $mobileMax) {
+    width: 50px;
+  }
 }
 
 .header__menu-button-open,
